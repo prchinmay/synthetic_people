@@ -2,7 +2,10 @@ synthetic_people
 
 =================
 
+![banner](pics/banner.PNG)
+
 ##Abstract
+
 Camera-based patient monitoring is undergoing rapid adoption in the healthcare sector with the recent COVID-
 19 pandemic acting as a catalyst. It offers round-the-clock monitoring of patients in clinical units (e.g. ICUs,
 ORs), or at their homes through installed cameras, enabling timely, pre-emptive care. These are powered by
