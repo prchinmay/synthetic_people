@@ -1,11 +1,15 @@
-synthetic_people
+# synthetic_people
 
 =================
 
 ![banner](pics/banner.PNG)
 
-##Abstract
+## Overview 
 
+This repository contains code for generating training data of synthetic people for developing 
+objection detection networks.
+
+## Abstract
 Camera-based patient monitoring is undergoing rapid adoption in the healthcare sector with the recent COVID-
 19 pandemic acting as a catalyst. It offers round-the-clock monitoring of patients in clinical units (e.g. ICUs,
 ORs), or at their homes through installed cameras, enabling timely, pre-emptive care. These are powered by
@@ -22,3 +26,7 @@ characters in poses unseen in the original dataset using Pose-Warp GAN. Addition
 to assess diversity in human pose datasets. The proposed method of augmentation is evaluated using YOLOv3.
 We show that our pose augmentation technique significantly improves person detection performance compared
 to traditional data augmentation, especially in low data regimes.
+
+## Methodology
+To reproduce the results of this work, follow the steps mentioned below. The image below is provided for reference.
+![meth_full](pics/meth_full.png)
