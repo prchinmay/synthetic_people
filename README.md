@@ -1,13 +1,12 @@
 # synthetic_people
 
-=================
-
+### [Full Report](https://repository.tudelft.nl/islandora/object/uuid%3A92ccd5c4-911d-43a4-9e84-88509200e812?collection=education) 
 ![banner](pics/banner.PNG)
 
 ## Overview 
 
-This repository contains code for generating training data of synthetic people for developing 
-objection detection networks.
+This repository contains code for generating synthetic people in diverse poses. The resulting dataset 
+is used as training data for developing objection detection networks.
 
 ## Abstract
 Camera-based patient monitoring is undergoing rapid adoption in the healthcare sector with the recent COVID-
@@ -27,6 +26,21 @@ to assess diversity in human pose datasets. The proposed method of augmentation 
 We show that our pose augmentation technique significantly improves person detection performance compared
 to traditional data augmentation, especially in low data regimes.
 
+The following picture gives the overall objective.
+![objective](pics/objective.PNG)
+
 ## Methodology
 To reproduce the results of this work, follow the steps mentioned below. The image below is provided for reference.
 ![meth_full](pics/meth_full.png)
+
+### Step 1: Preparing data
+For this work, we used the [SURREAL dataset](https://github.com/gulvarol/surreal) as the dataset to augment. 
+This implementation is not limited to just synthetic characters. Feel free to use any other "people" dataset 
+that suits your application.
+
+* Run `extract_frames.py` to extract image frames from video files in SURREAL dataset. The script saves RGB images, GT bounding 
+boxes and pose keypoint files. Set appropriates paths and frames/video.  
+* Run `gaussian.py` inside the `gaussian` directory. Choose suitable no of images, paths and other variables in `params.py`. 
+`gaussian.py` converts bounding box from SURREAL format to the format acceptable in 
+[Pose-Warp GAN](https://openaccess.thecvf.com/content_cvpr_2018/papers/Balakrishnan_Synthesizing_Images_of_CVPR_2018_paper.pdf). 
+It also converts bboxs to the format given in ([YOLOv3](https://github.com/qqwweee/keras-yolo3)format). 
