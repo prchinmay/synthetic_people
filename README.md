@@ -77,5 +77,5 @@ in this manner serves as the training data for the next step. Some example image
 
 ![paste](pics/paste.PNG)
 
-###Step 4: Training and Validation
+### Step 4: Training and Validation
 
