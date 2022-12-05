@@ -31,6 +31,7 @@ The following picture gives the overall objective.
 
 ## Methodology
 To reproduce the results of this work, follow the steps mentioned below. The image below is provided for reference.
+
 ![meth_full](pics/meth_full.png)
 
 ### Step 1: Preparing data
@@ -43,4 +44,14 @@ boxes and pose keypoint files. Set appropriates paths and frames/video.
 * Run `gaussian.py` inside the `gaussian` directory. Choose suitable no of images, paths and other variables in `params.py`. 
 `gaussian.py` converts bounding box from SURREAL format to the format acceptable in 
 [Pose-Warp GAN](https://openaccess.thecvf.com/content_cvpr_2018/papers/Balakrishnan_Synthesizing_Images_of_CVPR_2018_paper.pdf). 
-It also converts bboxs to the format given in ([YOLOv3](https://github.com/qqwweee/keras-yolo3)format). 
+It also converts bboxs to the format given in [YOLOv3](https://github.com/qqwweee/keras-yolo3) format.
+
+### Step 2: Augment poses
+Run cells in `aug_plots.ipynb` notebook to generate new poses from existing poses. The picture below shows some examples of 
+generated poses using this method.
+
+![good_poses](pics/good_poses.png)
+
+The picture below shows existing poses in the source dataset and newly generated poses overlapped on a PCA projected 2D space.
+
+![pca](pics/pca.png)
