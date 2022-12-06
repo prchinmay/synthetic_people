@@ -96,7 +96,7 @@ performance.
 ![multi](pics/multi.PNG)
 
 ## Acknowledgements
-This work has adapted code from
+This work has adapted code from:
 * [Pose-Warp GAN](https://github.com/balakg/posewarp-cvpr2018)
 * [YOLOv3](https://github.com/qqwweee/keras-yolo3)
-* [YOLOv3-Blender]https://github.com/huytjuh/YOLOv3-Blender
+* [YOLOv3-Blender](https://github.com/huytjuh/YOLOv3-Blender)
