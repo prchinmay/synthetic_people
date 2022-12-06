@@ -1,5 +1,4 @@
-# synthetic_people
-
+# Enriching Diversity of Synthetic Images for Person Detection
 ### [Full Report](https://repository.tudelft.nl/islandora/object/uuid%3A92ccd5c4-911d-43a4-9e84-88509200e812?collection=education) 
 ![banner](pics/banner.PNG)
 
@@ -72,10 +71,32 @@ The picture below shows some example outputs.
 * Run cells in `gopen.ipynb` for pasting newly generated people on images from 
 [Google Open Images](https://storage.googleapis.com/openimages/web/index.html) as backgrounds. 
 The cell under comment *#SINGLE TRAIN* procduces images having 1 person per image and the cell under comment *#MULTI TRAIN* 
-procduces images having multiple people per image. Select required number of images to be generated. Augmented images produced
+procduces images having multiple people per image. The script also generates bbox annotations in YOLOv3 format. 
+Select required number of images to be generated. Augmented images produced
 in this manner serves as the training data for the next step. Some example images are shown below:
 
 ![paste](pics/paste.PNG)
 
 ### Step 4: Training and Validation
 
+All training and testing scripts are based from this [YOLOv3](https://github.com/qqwweee/keras-yolo3) repository. 
+For pre-training YOLO network with synthetic augmented data, run the script `run_train.sh`. Edit `cfg.py` for adjusting paths
+and other parameters. For training with real data from MPII dataset, replace `finetune.py` with `train.py` in `run_train.sh`. Test 
+your trained YOLOv3 model by running the script `run_yolov3.sh`. Select appropriate paths and datasets to test on by editing `cfg.py`. 
+To obtain test results on objection detection metrics(Precesion, Recall, F1 score, mAP), run `evaluation.py`. To obtain pretty 
+Precesion vs Recall curves for different models, run [scores_all.py](https://github.com/huytjuh/YOLOv3-Blender/tree/main/main) 
+followed by [`create_graphs.py`](https://github.com/huytjuh/YOLOv3-Blender/tree/main/main/visualizations). Some results of object detection 
+on MPII human pose dataset is shown below:
+
+![detections](pics/detections.PNG)
+
+Picture below shows the result of augmenting training data with multi annotation images of synthetic people regarding person detection 
+performance. 
+
+![multi](pics/multi.PNG)
+
+## Acknowledgements
+This work has adapted code from
+* [Pose-Warp GAN](https://github.com/balakg/posewarp-cvpr2018)
+* [YOLOv3](https://github.com/qqwweee/keras-yolo3)
+* [YOLOv3-Blender]https://github.com/huytjuh/YOLOv3-Blender
