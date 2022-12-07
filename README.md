@@ -1,4 +1,5 @@
 # Enriching Diversity of Synthetic Images for Person Detection
+
 ### [Full Report](https://repository.tudelft.nl/islandora/object/uuid%3A92ccd5c4-911d-43a4-9e84-88509200e812?collection=education) 
 ![banner](pics/banner.PNG)
 
