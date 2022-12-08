@@ -1,12 +1,12 @@
-# Enriching Diversity of Synthetic Images for Person Detection
+# Enriching Diversity of Synthetic images of people for developing improved person detection models. 
 
 ### [Full Report](https://repository.tudelft.nl/islandora/object/uuid%3A92ccd5c4-911d-43a4-9e84-88509200e812?collection=education) 
 ![banner](pics/banner.PNG)
 
 ## Overview 
 
-This repository contains code for generating synthetic people in diverse poses. The resulting dataset 
-is used as training data for developing objection detection networks.
+This repository contains code for generating synthetic people in diverse unseen poses. The resulting dataset 
+is used as training data for developing better objection detection networks.
 
 ## Abstract
 Camera-based patient monitoring is undergoing rapid adoption in the healthcare sector with the recent COVID-
