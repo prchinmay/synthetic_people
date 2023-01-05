@@ -1,4 +1,4 @@
-# Enriching Diversity of Synthetic images of people for developing improved person detection models. 
+# Enriching Diversity of Synthetic images for improving camera based patient monitoring. 
 
 ### [Full Report](https://repository.tudelft.nl/islandora/object/uuid%3A92ccd5c4-911d-43a4-9e84-88509200e812?collection=education) 
 ![banner](pics/banner.PNG)
